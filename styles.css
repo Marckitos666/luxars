@@ -737,6 +737,9 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 /* ============================================================
    PROFILE PAGE
    ============================================================ */
+#page-profile {
+  padding-top: 100px;
+}
 #profileContent {
   display: grid;
   gap: 28px;
@@ -773,7 +776,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 
 .profile-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 4px;
 }
 .profile-gallery img {

@@ -8,10 +8,14 @@ const photographers = [
     id: 1, name: "Sofía Ramírez", specialty: "Retratos", rating: 4.9, price: 180,
     avatar: "https://i.pravatar.cc/300?img=1",
     portfolio: [
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&h=400&fit=crop"
     ],
     bio: "Fotógrafa profesional especializada en retratos con más de 8 años de experiencia. Apasionada por capturar la esencia única de cada persona.",
     location: "Medellín", experience: "8 años", deliveries: "5-7 días hábiles"
@@ -20,9 +24,14 @@ const photographers = [
     id: 2, name: "Mateo Giraldo", specialty: "Eventos", rating: 4.7, price: 250,
     avatar: "https://i.pravatar.cc/300?img=3",
     portfolio: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=500&h=400&fit=crop"
     ],
     bio: "Especialista en cobertura de eventos sociales y corporativos. Cobertura en todo el Valle de Aburrá.",
     location: "Envigado", experience: "6 años", deliveries: "7-10 días hábiles"
@@ -31,10 +40,14 @@ const photographers = [
     id: 3, name: "Valentina Orozco", specialty: "Moda", rating: 4.8, price: 320,
     avatar: "https://i.pravatar.cc/300?img=5",
     portfolio: [
-      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1488161628813-04466f872be2?w=500&h=400&fit=crop"
     ],
     bio: "Fotógrafa de moda y editorial. Trabajos publicados en revistas nacionales e internacionales.",
     location: "Medellín", experience: "10 años", deliveries: "3-5 días hábiles"
@@ -43,9 +56,14 @@ const photographers = [
     id: 4, name: "Andrés Castaño", specialty: "Bodas", rating: 4.9, price: 450,
     avatar: "https://i.pravatar.cc/300?img=8",
     portfolio: [
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1519741497674-611481863552?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1464054313797-e27fb58e90a9?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1464695436052-e2b1e37de202?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1415183995122-d18d9e6c1f8b?w=500&h=400&fit=crop"
     ],
     bio: "Fotógrafo especializado en bodas. Narrativa visual con un estilo documental y romántico.",
     location: "Sabaneta", experience: "12 años", deliveries: "10-14 días hábiles"
@@ -54,9 +72,14 @@ const photographers = [
     id: 5, name: "Camila Duque", specialty: "Producto", rating: 4.6, price: 150,
     avatar: "https://i.pravatar.cc/300?img=9",
     portfolio: [
-      "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1526948128577-703ee1aeb6c2?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&h=400&fit=crop"
     ],
     bio: "Fotografía de producto y e-commerce. Imágenes que venden, con calidad profesional.",
     location: "Medellín", experience: "5 años", deliveries: "2-4 días hábiles"
@@ -65,9 +88,14 @@ const photographers = [
     id: 6, name: "Felipe Restrepo", specialty: "Arquitectura", rating: 4.7, price: 200,
     avatar: "https://i.pravatar.cc/300?img=12",
     portfolio: [
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=300&fit=crop",
-      "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=400&h=300&fit=crop"
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1464146072230-91cabc968266?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1494526585158-c7b6e060f4b1?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=500&h=400&fit=crop"
     ],
     bio: "Fotógrafo de arquitectura e interiores. Proyectos residenciales, comerciales y hoteleros.",
     location: "Bello", experience: "7 años", deliveries: "5-7 días hábiles"
