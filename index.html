@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxArs — Conecta con los mejores fotógrafos del Valle de Aburrá</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== ANIMATED BACKGROUND ========== -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar glass" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo" data-page="home">
+        <i class="fas fa-camera"></i> Lux<span>Ars</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" data-page="home" class="active link">
+          <span class="link--top">Inicio</span>
+          <span class="link--bottom">Inicio</span>
+        </a></li>
+        <li><a href="#" data-page="catalog" class="link">
+          <span class="link--top">Explorar</span>
+          <span class="link--bottom">Explorar</span>
+        </a></li>
+        <li><a href="#" data-page="dashboard" class="link">
+          <span class="link--top">Dashboard</span>
+          <span class="link--bottom">Dashboard</span>
+        </a></li>
+        <li><a href="#" data-page="auth" class="btn-login"><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== PAGE CONTAINER ========== -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ===== HOME / LANDING ===== -->
+    <section class="page active" id="page-home">
+
+      <!-- Hero -->
+      <header class="hero">
+        <div class="container hero-content">
+          <div class="hero-text glass-card highlight">
+            <span class="badge">Marketplace Fotográfico</span>
+            <h1>Conecta con los mejores<br/>fotógrafos del <span>Valle de Aburrá</span></h1>
+            <p>Encuentra, reserva y crea recuerdos inolvidables con profesionales verificados. Transparencia, seguridad y talento local en un solo lugar.</p>
+            <div class="hero-cta">
+              <a href="#" data-page="catalog" class="btn btn-primary"><i class="fas fa-search"></i> Explorar fotógrafos</a>
+              <a href="#" data-page="auth" class="btn btn-outline"><i class="fas fa-user-plus"></i> Registrarme</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="glass-card image-card">
+              <i class="fas fa-camera-retro"></i>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Featured Photographers -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge">Destacados</span>
+            <h2>Fotógrafos destacados</h2>
+            <p>Profesionales verificados con los mejores puntajes</p>
+          </div>
+          <div class="photographer-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+      <!-- Quick Search -->
+      <section class="section quick-search-section">
+        <div class="container">
+          <div class="glass-card search-card">
+            <div class="search-bar">
+              <i class="fas fa-search"></i>
+              <input type="text" id="quickSearch" placeholder="Busca por especialidad (retratos, eventos, moda...) o ubicación..." />
+              <button class="btn btn-primary" id="quickSearchBtn">Buscar</button>
+            </div>
+            <div class="search-tags">
+              <span>Popular:</span>
+              <button class="tag" data-filter="Retratos">Retratos</button>
+              <button class="tag" data-filter="Eventos">Eventos</button>
+              <button class="tag" data-filter="Moda">Moda</button>
+              <button class="tag" data-filter="Bodas">Bodas</button>
+              <button class="tag" data-filter="Producto">Producto</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it Works -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="badge">Proceso</span>
+            <h2>¿Cómo funciona?</h2>
+            <p>Tres pasos sencillos para conectar con el fotógrafo ideal</p>
+          </div>
+          <div class="steps-grid">
+            <div class="glass-card step-card">
+              <div class="step-icon"><span>1</span><i class="fas fa-search"></i></div>
+              <h3>Busca</h3>
+              <p>Explora perfiles, filtra por especialidad, estilo o presupuesto y descubre al fotógrafo perfecto para tu proyecto.</p>
+            </div>
+            <div class="glass-card step-card">
+              <div class="step-icon"><span>2</span><i class="fas fa-calendar-check"></i></div>
+              <h3>Reserva</h3>
+              <p>Revisa la disponibilidad en el calendario, solicita una cotización y confirma tu sesión con pago seguro.</p>
+            </div>
+            <div class="glass-card step-card">
+              <div class="step-icon"><span>3</span><i class="fas fa-star"></i></div>
+              <h3>Crea</h3>
+              <p>Disfruta de tu sesión y recibe tus fotos editadas. Califica y comparte tu experiencia en la plataforma.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===== CATALOG ===== -->
+    <section class="page" id="page-catalog">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Catálogo</span>
+          <h2>Explorar fotógrafos</h2>
+          <p>Filtra por especialidad, precio o disponibilidad</p>
+        </div>
+        <div class="catalog-layout">
+          <aside class="sidebar glass-card" id="sidebar">
+            <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+            <h3><i class="fas fa-sliders-h"></i> Filtros</h3>
+            <div class="filter-group">
+              <label>Especialidad</label>
+              <select id="filterSpecialty">
+                <option value="">Todas</option>
+                <option>Retratos</option>
+                <option>Eventos</option>
+                <option>Moda</option>
+                <option>Bodas</option>
+                <option>Producto</option>
+                <option>Arquitectura</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label>Precio máximo</label>
+              <input type="range" id="filterPrice" min="0" max="500" value="500" />
+              <span class="price-label">Hasta $<span id="priceValue">500</span>.000</span>
+            </div>
+            <div class="filter-group">
+              <label>Disponibilidad</label>
+              <select id="filterAvailability">
+                <option value="">Cualquier día</option>
+                <option>Esta semana</option>
+                <option>Próximo mes</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" id="applyFilters"><i class="fas fa-filter"></i> Aplicar filtros</button>
+          </aside>
+          <div class="catalog-content">
+            <button class="btn btn-outline sidebar-toggle" id="sidebarToggle"><i class="fas fa-sliders-h"></i> Filtros</button>
+            <div class="photographer-grid" id="catalogGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PHOTOGRAPHER PROFILE ===== -->
+    <section class="page" id="page-profile">
+      <div class="container">
+        <button class="btn btn-outline back-btn" id="backToCatalog"><i class="fas fa-arrow-left"></i> Volver al catálogo</button>
+        <div id="profileContent"></div>
+      </div>
+    </section>
+
+    <!-- ===== DASHBOARD ===== -->
+    <section class="page" id="page-dashboard">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Panel</span>
+          <h2>Mi Dashboard</h2>
+          <p>Gestiona tus reservas y cotizaciones</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+          <div class="glass-card stat-card"><i class="fas fa-calendar-check"></i><span class="stat-num">3</span><span>Activas</span></div>
+          <div class="glass-card stat-card"><i class="fas fa-check-circle"></i><span class="stat-num">12</span><span>Completadas</span></div>
+          <div class="glass-card stat-card"><i class="fas fa-clock"></i><span class="stat-num">1</span><span>Pendientes</span></div>
+          <div class="glass-card stat-card"><i class="fas fa-star"></i><span class="stat-num">4.8</span><span>Promedio</span></div>
+        </div>
+
+        <!-- Reservations -->
+        <div class="dashboard-grid">
+          <div class="glass-card dashboard-main">
+            <h3><i class="fas fa-list"></i> Mis reservas</h3>
+            <div class="reservation-list" id="reservationList">
+              <div class="reservation-item">
+                <div class="reservation-info">
+                  <img src="https://i.pravatar.cc/48?img=11" alt="Foto" />
+                  <div><strong>Carlos Pérez</strong><span>Bodas · 12 Sep 2026</span></div>
+                </div>
+                <span class="status-badge confirmed">Confirmada</span>
+              </div>
+              <div class="reservation-item">
+                <div class="reservation-info">
+                  <img src="https://i.pravatar.cc/48?img=5" alt="Foto" />
+                  <div><strong>Ana Martínez</strong><span>Retratos · 28 Ago 2026</span></div>
+                </div>
+                <span class="status-badge pending">Pendiente</span>
+              </div>
+              <div class="reservation-item">
+                <div class="reservation-info">
+                  <img src="https://i.pravatar.cc/48?img=9" alt="Foto" />
+                  <div><strong>Luis Gómez</strong><span>Eventos · 15 Jul 2026</span></div>
+                </div>
+                <span class="status-badge completed">Finalizada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote Form -->
+          <div class="glass-card dashboard-form">
+            <h3><i class="fas fa-file-invoice"></i> Solicitar cotización</h3>
+            <form id="quoteForm">
+              <input type="text" placeholder="Tipo de evento" required />
+              <input type="date" required />
+              <textarea rows="3" placeholder="Requerimientos adicionales..."></textarea>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar solicitud</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AUTH ===== -->
+    <section class="page" id="page-auth">
+      <div class="container auth-container">
+        <div class="glass-card auth-card">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Iniciar sesión</button>
+            <button class="auth-tab" data-tab="register">Registrarse</button>
+          </div>
+
+          <!-- Login -->
+          <div class="auth-form active" id="auth-login">
+            <h2><i class="fas fa-sign-in-alt"></i> Bienvenido de nuevo</h2>
+            <form>
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                <input type="email" placeholder="tu@correo.com" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-lock"></i> Contraseña</label>
+                <input type="password" placeholder="••••••••" required />
+              </div>
+              <button type="submit" class="btn btn-primary full-width"><i class="fas fa-arrow-right"></i> Ingresar</button>
+              <p class="auth-alt">¿No tienes cuenta? <a href="#" data-tab="register">Regístrate</a></p>
+            </form>
+          </div>
+
+          <!-- Register -->
+          <div class="auth-form" id="auth-register">
+            <h2><i class="fas fa-user-plus"></i> Crear cuenta</h2>
+            <form>
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" placeholder="Juan Pérez" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                <input type="email" placeholder="tu@correo.com" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-lock"></i> Contraseña</label>
+                <input type="password" placeholder="Mín. 8 caracteres" required />
+              </div>
+              <div class="form-group role-selector">
+                <label><i class="fas fa-user-tag"></i> Quiero ser</label>
+                <div class="role-options">
+                  <label class="role-option">
+                    <input type="radio" name="role" value="client" checked />
+                    <span><i class="fas fa-user"></i> Cliente</span>
+                  </label>
+                  <label class="role-option">
+                    <input type="radio" name="role" value="photographer" />
+                    <span><i class="fas fa-camera"></i> Fotógrafo</span>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary full-width"><i class="fas fa-user-check"></i> Crear cuenta</button>
+              <p class="auth-alt">¿Ya tienes cuenta? <a href="#" data-tab="login">Inicia sesión</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer glass">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo"><i class="fas fa-camera"></i> Lux<span>Ars</span></a>
+        <p>© 2026 LuxArs. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
