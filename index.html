@@ -65,7 +65,7 @@
       <!-- Hero -->
       <header class="hero">
         <div class="container hero-content">
-          <div class="hero-text glass-card highlight">
+          <div class="hero-text">
             <span class="badge">Marketplace Fotográfico</span>
             <h1>Conecta con los mejores<br/>fotógrafos del <span>Valle de Aburrá</span></h1>
             <p>Encuentra, reserva y crea recuerdos inolvidables con profesionales verificados. Transparencia, seguridad y talento local en un solo lugar.</p>
@@ -75,7 +75,7 @@
             </div>
           </div>
           <div class="hero-visual">
-            <div class="glass-card photo-collage">
+            <div class="photo-collage">
               <div class="collage-grid">
                 <div class="collage-item ci-1" style="background-image:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop');"></div>
                 <div class="collage-item ci-2" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop');"></div>
@@ -91,6 +91,7 @@
       <section class="section">
         <div class="container">
           <div class="section-header">
+            <div class="hr-red"></div>
             <span class="badge">Destacados</span>
             <h2>Fotógrafos destacados</h2>
             <p>Profesionales verificados con los mejores puntajes</p>
@@ -102,7 +103,7 @@
       <!-- Quick Search -->
       <section class="section quick-search-section">
         <div class="container">
-          <div class="glass-card search-card">
+          <div class="search-card">
             <div class="search-bar">
               <i class="fas fa-search"></i>
               <input type="text" id="quickSearch" placeholder="Busca por especialidad (retratos, eventos, moda...) o ubicación..." />
@@ -124,23 +125,24 @@
       <section class="section">
         <div class="container">
           <div class="section-header">
+            <div class="hr-red"></div>
             <span class="badge">Proceso</span>
             <h2>¿Cómo funciona?</h2>
             <p>Tres pasos sencillos para conectar con el fotógrafo ideal</p>
           </div>
           <div class="steps-grid">
-            <div class="glass-card step-card">
-              <div class="step-icon"><span>1</span><i class="fas fa-search"></i></div>
+            <div class="step-card">
+              <div class="step-icon"><span>01</span></div>
               <h3>Busca</h3>
               <p>Explora perfiles, filtra por especialidad, estilo o presupuesto y descubre al fotógrafo perfecto para tu proyecto.</p>
             </div>
-            <div class="glass-card step-card">
-              <div class="step-icon"><span>2</span><i class="fas fa-calendar-check"></i></div>
+            <div class="step-card">
+              <div class="step-icon"><span>02</span></div>
               <h3>Reserva</h3>
               <p>Revisa la disponibilidad en el calendario, solicita una cotización y confirma tu sesión con pago seguro.</p>
             </div>
-            <div class="glass-card step-card">
-              <div class="step-icon"><span>3</span><i class="fas fa-star"></i></div>
+            <div class="step-card">
+              <div class="step-icon"><span>03</span></div>
               <h3>Crea</h3>
               <p>Disfruta de tu sesión y recibe tus fotos editadas. Califica y comparte tu experiencia en la plataforma.</p>
             </div>
@@ -152,13 +154,14 @@
     <!-- ===== CATALOG ===== -->
     <section class="page" id="page-catalog">
       <div class="container">
-        <div class="section-header">
-          <span class="badge">Catálogo</span>
-          <h2>Explorar fotógrafos</h2>
-          <p>Filtra por especialidad, precio o disponibilidad</p>
-        </div>
-        <div class="catalog-layout">
-          <aside class="sidebar glass-card" id="sidebar">
+      <div class="section-header">
+            <div class="hr-red"></div>
+            <span class="badge">Catálogo</span>
+            <h2>Explorar fotógrafos</h2>
+            <p>Filtra por especialidad, precio o disponibilidad</p>
+          </div>
+          <div class="catalog-layout">
+            <aside class="sidebar" id="sidebar">
             <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
             <h3><i class="fas fa-sliders-h"></i> Filtros</h3>
             <div class="filter-group">
@@ -208,6 +211,7 @@
     <section class="page" id="page-dashboard">
       <div class="container">
         <div class="section-header">
+          <div class="hr-red"></div>
           <span class="badge">Panel</span>
           <h2>Mi Dashboard</h2>
           <p>Gestiona tus reservas y cotizaciones</p>
@@ -215,15 +219,15 @@
 
         <!-- Stats -->
         <div class="stats-row">
-          <div class="glass-card stat-card"><i class="fas fa-calendar-check"></i><span class="stat-num">3</span><span>Activas</span></div>
-          <div class="glass-card stat-card"><i class="fas fa-check-circle"></i><span class="stat-num">12</span><span>Completadas</span></div>
-          <div class="glass-card stat-card"><i class="fas fa-clock"></i><span class="stat-num">1</span><span>Pendientes</span></div>
-          <div class="glass-card stat-card"><i class="fas fa-star"></i><span class="stat-num">4.8</span><span>Promedio</span></div>
+          <div class="stat-card"><i class="fas fa-calendar-check"></i><span class="stat-num">3</span><span>Activas</span></div>
+          <div class="stat-card"><i class="fas fa-check-circle"></i><span class="stat-num">12</span><span>Completadas</span></div>
+          <div class="stat-card"><i class="fas fa-clock"></i><span class="stat-num">1</span><span>Pendientes</span></div>
+          <div class="stat-card"><i class="fas fa-star"></i><span class="stat-num">4.8</span><span>Promedio</span></div>
         </div>
 
         <!-- Reservations -->
         <div class="dashboard-grid">
-          <div class="glass-card dashboard-main">
+          <div class="dashboard-main">
             <h3><i class="fas fa-list"></i> Mis reservas</h3>
             <div class="reservation-list" id="reservationList">
               <div class="reservation-item">
@@ -251,7 +255,7 @@
           </div>
 
           <!-- Quote Form -->
-          <div class="glass-card dashboard-form">
+          <div class="dashboard-form">
             <h3><i class="fas fa-file-invoice"></i> Solicitar cotización</h3>
             <form id="quoteForm">
               <input type="text" placeholder="Tipo de evento" required />
@@ -267,7 +271,7 @@
     <!-- ===== AUTH ===== -->
     <section class="page" id="page-auth">
       <div class="container auth-container">
-        <div class="glass-card auth-card">
+        <div class="auth-card">
           <div class="auth-tabs">
             <button class="auth-tab active" data-tab="login">Iniciar sesión</button>
             <button class="auth-tab" data-tab="register">Registrarse</button>
