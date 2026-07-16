@@ -74,6 +74,13 @@
               <a href="#" data-page="catalog" class="btn btn-primary"><i class="fas fa-search"></i> Explorar fotógrafos</a>
               <a href="#" data-page="auth" class="btn btn-outline"><i class="fas fa-user-plus"></i> Registrarme</a>
             </div>
+            <div class="hero-search">
+              <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="quickSearch" placeholder="Busca por especialidad (retratos, eventos, moda...) o ubicación..." />
+                <button class="btn btn-primary" id="quickSearchBtn">Buscar</button>
+              </div>
+            </div>
           </div>
           <div class="hero-visual">
             <div class="carousel" id="heroCarousel">
@@ -104,61 +111,59 @@
         </div>
       </section>
 
-      <!-- Quick Search -->
-      <section class="section quick-search-section">
+      <!-- Thematic Categories -->
+      <section class="section categories-section">
         <div class="container">
-          <div class="search-card">
-            <div class="search-bar">
-              <i class="fas fa-search"></i>
-              <input type="text" id="quickSearch" placeholder="Busca por especialidad (retratos, eventos, moda...) o ubicación..." />
-              <button class="btn btn-primary" id="quickSearchBtn">Buscar</button>
+          <div class="section-header">
+            <div class="hr-red"></div>
+            <span class="badge">Temáticas</span>
+            <h2>Explora por categoría</h2>
+            <p>Descubre fotógrafos especializados en cada estilo</p>
+          </div>
+          <div class="categories-grid">
+            <div class="tag-wrapper" data-filter="Retratos">
+              <div class="tag-image">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop" alt="Retratos" />
+              </div>
+              <div class="tag-header">
+                <h4>Retratos</h4>
+                <h4>Ver</h4>
+              </div>
             </div>
-            <div class="search-tags">
-              <span>Popular:</span>
-              <div class="tag-wrapper" data-filter="Retratos">
-                <div class="tag-image">
-                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=140&fit=crop" alt="Retratos" />
-                </div>
-                <div class="tag-header">
-                  <h4>Retratos</h4>
-                  <h4>Ver</h4>
-                </div>
+            <div class="tag-wrapper" data-filter="Eventos">
+              <div class="tag-image">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&h=600&fit=crop" alt="Eventos" />
               </div>
-              <div class="tag-wrapper" data-filter="Eventos">
-                <div class="tag-image">
-                  <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=200&h=140&fit=crop" alt="Eventos" />
-                </div>
-                <div class="tag-header">
-                  <h4>Eventos</h4>
-                  <h4>Ver</h4>
-                </div>
+              <div class="tag-header">
+                <h4>Eventos</h4>
+                <h4>Ver</h4>
               </div>
-              <div class="tag-wrapper" data-filter="Moda">
-                <div class="tag-image">
-                  <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=200&h=140&fit=crop" alt="Moda" />
-                </div>
-                <div class="tag-header">
-                  <h4>Moda</h4>
-                  <h4>Ver</h4>
-                </div>
+            </div>
+            <div class="tag-wrapper" data-filter="Moda">
+              <div class="tag-image">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&h=600&fit=crop" alt="Moda" />
               </div>
-              <div class="tag-wrapper" data-filter="Bodas">
-                <div class="tag-image">
-                  <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=140&fit=crop" alt="Bodas" />
-                </div>
-                <div class="tag-header">
-                  <h4>Bodas</h4>
-                  <h4>Ver</h4>
-                </div>
+              <div class="tag-header">
+                <h4>Moda</h4>
+                <h4>Ver</h4>
               </div>
-              <div class="tag-wrapper" data-filter="Producto">
-                <div class="tag-image">
-                  <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=200&h=140&fit=crop" alt="Producto" />
-                </div>
-                <div class="tag-header">
-                  <h4>Producto</h4>
-                  <h4>Ver</h4>
-                </div>
+            </div>
+            <div class="tag-wrapper" data-filter="Bodas">
+              <div class="tag-image">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop" alt="Bodas" />
+              </div>
+              <div class="tag-header">
+                <h4>Bodas</h4>
+                <h4>Ver</h4>
+              </div>
+            </div>
+            <div class="tag-wrapper" data-filter="Producto">
+              <div class="tag-image">
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&h=600&fit=crop" alt="Producto" />
+              </div>
+              <div class="tag-header">
+                <h4>Producto</h4>
+                <h4>Ver</h4>
               </div>
             </div>
           </div>
