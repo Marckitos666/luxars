@@ -1010,7 +1010,27 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 .filter-group input[type="range"] { width: 100%; accent-color: var(--accent-red); margin: 8px 0; }
 .price-label { font-size: 0.85rem; color: var(--text-secondary); }
 .sidebar-toggle { display: none; margin-bottom: 16px; }
-.sidebar-close { display: none; float: right; font-size: 1.2rem; }
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.sidebar-close:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
 
 /* ============================================================
    PROFILE PAGE
@@ -1353,7 +1373,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   .catalog-layout { grid-template-columns: 1fr; }
   .sidebar { display: none; position: fixed; inset: 0; z-index: 999; padding: 40px; overflow-y: auto; }
   .sidebar.open { display: block; }
-  .sidebar-close { display: block; }
+  .sidebar-close { display: flex; }
   .sidebar-toggle { display: inline-flex; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
   .dashboard-grid { grid-template-columns: 1fr; }

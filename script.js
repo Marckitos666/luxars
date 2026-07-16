@@ -232,8 +232,11 @@ document.getElementById('filterPrice').addEventListener('input', function () {
 document.getElementById('sidebarToggle').addEventListener('click', () => {
   document.getElementById('sidebar').classList.add('open');
 });
-document.getElementById('sidebarClose').addEventListener('click', () => {
-  document.getElementById('sidebar').classList.remove('open');
+// Close sidebar: X button or backdrop click
+document.getElementById('sidebar').addEventListener('click', function (e) {
+  if (e.target === this || e.target.closest('.sidebar-close')) {
+    this.classList.remove('open');
+  }
 });
 
 // ----- Profile view -----
