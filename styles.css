@@ -72,6 +72,49 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   75% { transform: translate(50px, 30px) scale(1.05); }
 }
 
+/* ----- Floating Photo Background ----- */
+.photo-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.float-photo {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  filter: grayscale(0.6) sepia(0.3);
+  animation: photoDrift 30s ease-in-out infinite;
+}
+.float-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(255,255,255,0.06);
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%);
+}
+.ph-1 { width: 100px; height: 130px; top: 10%; left: 5%; animation-duration: 28s; transform: rotate(-8deg); }
+.ph-2 { width: 140px; height: 100px; top: 20%; right: 8%; animation-duration: 35s; animation-delay: -7s; transform: rotate(5deg); }
+.ph-3 { width: 110px; height: 140px; bottom: 25%; left: 10%; animation-duration: 32s; animation-delay: -14s; transform: rotate(12deg); }
+.ph-4 { width: 130px; height: 110px; bottom: 15%; right: 5%; animation-duration: 26s; animation-delay: -21s; transform: rotate(-5deg); }
+.ph-5 { width: 90px; height: 120px; top: 55%; left: 50%; animation-duration: 30s; animation-delay: -4s; transform: rotate(-12deg); }
+.ph-6 { width: 120px; height: 90px; top: 5%; left: 40%; animation-duration: 33s; animation-delay: -10s; transform: rotate(8deg); }
+
+@keyframes photoDrift {
+  0%, 100% { transform: translateY(0px) rotate(var(--r, 0deg)); }
+  25% { transform: translateY(-30px) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(10px) rotate(var(--r, 0deg)); }
+  75% { transform: translateY(-15px) rotate(var(--r, 0deg)); }
+}
+.ph-1 { --r: -8deg; } .ph-2 { --r: 5deg; } .ph-3 { --r: 12deg; }
+.ph-4 { --r: -5deg; } .ph-5 { --r: -12deg; } .ph-6 { --r: 8deg; }
+
 /* ----- Liquid Glass Base ----- */
 .glass, .glass-card {
   background: var(--bg-card);
@@ -372,27 +415,48 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .hero-visual { display: flex; justify-content: center; }
-.image-card {
+
+/* Photo Collage (Hero) */
+.photo-collage {
   width: 380px;
   height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  color: var(--accent-red);
+  padding: 12px;
   position: relative;
   overflow: hidden;
-  background: rgba(30, 30, 30, 0.3);
+  background: rgba(30, 30, 30, 0.25);
   backdrop-filter: blur(20px) saturate(1.4);
   border: 1px solid rgba(255,255,255,0.06);
 }
-.image-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(255, 0, 0, 0.12), transparent 70%);
+.collage-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
 }
-.image-card i { filter: drop-shadow(0 0 30px rgba(255,0,0,0.25)); }
+.collage-item {
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: saturate(0.8) brightness(0.9);
+  animation: collageBreathe 6s ease-in-out infinite;
+}
+.ci-1 { animation-delay: 0s; }
+.ci-2 { animation-delay: -1.5s; }
+.ci-3 { animation-delay: -3s; }
+.ci-4 { animation-delay: -4.5s; }
+.photo-collage:hover .collage-item { filter: saturate(1.1) brightness(1.05); }
+.photo-collage:hover .ci-1 { transform: translate(-4px, -4px) scale(1.03); }
+.photo-collage:hover .ci-2 { transform: translate(4px, -4px) scale(1.03); }
+.photo-collage:hover .ci-3 { transform: translate(-4px, 4px) scale(1.03); }
+.photo-collage:hover .ci-4 { transform: translate(4px, 4px) scale(1.03); }
+
+@keyframes collageBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
 
 /* ============================================================
    QUICK SEARCH
