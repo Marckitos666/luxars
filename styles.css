@@ -1015,8 +1015,8 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 /* ============================================================
    PROFILE PAGE
    ============================================================ */
-#page-profile {
-  padding-top: 100px;
+#page-profile, #page-dashboard, #page-catalog, #page-auth {
+  padding-top: 130px;
 }
 #profileContent {
   display: grid;
