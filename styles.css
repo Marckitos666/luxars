@@ -979,9 +979,6 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--accent-red);
 }
 .filter-group { margin-bottom: 20px; }
 .filter-group label {
@@ -1010,11 +1007,21 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 .filter-group input[type="range"] { width: 100%; accent-color: var(--accent-red); margin: 8px 0; }
 .price-label { font-size: 0.85rem; color: var(--text-secondary); }
 .sidebar-toggle { display: none; margin-bottom: 16px; }
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-red);
+}
+.sidebar-header h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 .sidebar-close {
   display: none;
-  position: absolute;
-  top: 12px;
-  right: 12px;
   width: 36px;
   height: 36px;
   font-size: 1rem;
@@ -1025,7 +1032,6 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   transition: var(--transition);
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 .sidebar-close:hover {
   border-color: var(--accent-red);
@@ -1371,7 +1377,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   .hero-cta { justify-content: flex-start; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .catalog-layout { grid-template-columns: 1fr; }
-  .sidebar { display: none; position: fixed; inset: 0; z-index: 999; padding: 40px; overflow-y: auto; }
+  .sidebar { display: none; position: fixed; inset: 0; z-index: 1001; padding: 120px 40px 40px; overflow-y: auto; }
   .sidebar.open { display: block; }
   .sidebar-close { display: flex; }
   .sidebar-toggle { display: inline-flex; }
