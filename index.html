@@ -46,9 +46,25 @@
             <span class="link--top">Explorar</span>
             <span class="link--bottom">Explorar</span>
           </a></li>
-          <li><a href="#" data-page="dashboard" class="link">
-            <span class="link--top">Dashboard</span>
-            <span class="link--bottom">Dashboard</span>
+          <li><a href="#" data-page="reservas" class="link">
+            <span class="link--top">Reservas</span>
+            <span class="link--bottom">Reservas</span>
+          </a></li>
+          <li><a href="#" data-page="portafolio" class="link">
+            <span class="link--top">Portafolio</span>
+            <span class="link--bottom">Portafolio</span>
+          </a></li>
+          <li><a href="#" data-page="fotografos" class="link">
+            <span class="link--top">Fotógrafos</span>
+            <span class="link--bottom">Fotógrafos</span>
+          </a></li>
+          <li><a href="#" data-page="soporte" class="link">
+            <span class="link--top">Soporte</span>
+            <span class="link--bottom">Soporte</span>
+          </a></li>
+          <li><a href="#" data-page="chat" class="link">
+            <span class="link--top">Chat</span>
+            <span class="link--bottom">Chat</span>
           </a></li>
           <li><a href="#" data-page="auth" class="btn btn-login"><i class="fas fa-sign-in-alt"></i> Ingresar</a></li>
         </ul>
@@ -391,6 +407,441 @@
               <button type="submit" class="btn btn-primary full-width"><i class="fas fa-user-check"></i> Crear cuenta</button>
               <p class="auth-alt">¿Ya tienes cuenta? <a href="#" data-tab="login">Inicia sesión</a></p>
             </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESERVAS ===== -->
+    <section class="page" id="page-reservas">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Reservas</span>
+          <h2>Mis reservas</h2>
+          <p>Gestiona todas tus sesiones fotográficas</p>
+        </div>
+        <div class="reservas-stats">
+          <div class="stat-card"><i class="fas fa-calendar-check"></i><span class="stat-num">3</span><span>Activas</span></div>
+          <div class="stat-card"><i class="fas fa-check-circle"></i><span class="stat-num">12</span><span>Completadas</span></div>
+          <div class="stat-card"><i class="fas fa-clock"></i><span class="stat-num">1</span><span>Pendientes</span></div>
+          <div class="stat-card"><i class="fas fa-times-circle"></i><span class="stat-num">2</span><span>Canceladas</span></div>
+        </div>
+        <div class="reservas-table">
+          <div class="reservas-table-header">
+            <span>Fotógrafo</span><span>Servicio</span><span>Fecha</span><span>Estado</span><span>Total</span>
+          </div>
+          <div class="reservas-row">
+            <div class="reservas-cell"><img src="https://i.pravatar.cc/40?img=11" alt="" /><strong>Carlos Pérez</strong></div>
+            <div class="reservas-cell">Bodas</div>
+            <div class="reservas-cell">12 Sep 2026</div>
+            <div class="reservas-cell"><span class="status-badge confirmed">Confirmada</span></div>
+            <div class="reservas-cell">$450.000</div>
+          </div>
+          <div class="reservas-row">
+            <div class="reservas-cell"><img src="https://i.pravatar.cc/40?img=5" alt="" /><strong>Ana Martínez</strong></div>
+            <div class="reservas-cell">Retratos</div>
+            <div class="reservas-cell">28 Ago 2026</div>
+            <div class="reservas-cell"><span class="status-badge pending">Pendiente</span></div>
+            <div class="reservas-cell">$180.000</div>
+          </div>
+          <div class="reservas-row">
+            <div class="reservas-cell"><img src="https://i.pravatar.cc/40?img=9" alt="" /><strong>Luis Gómez</strong></div>
+            <div class="reservas-cell">Eventos</div>
+            <div class="reservas-cell">15 Jul 2026</div>
+            <div class="reservas-cell"><span class="status-badge completed">Finalizada</span></div>
+            <div class="reservas-cell">$250.000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTAFOLIO ===== -->
+    <section class="page" id="page-portafolio">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Portafolio</span>
+          <h2>Mi portafolio</h2>
+          <p>Administra tus trabajos y proyectos</p>
+        </div>
+        <div class="portfolio-actions">
+          <button class="btn btn-primary"><i class="fas fa-plus"></i> Nuevo proyecto</button>
+          <button class="btn btn-outline"><i class="fas fa-upload"></i> Subir imágenes</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid">
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Retratos urbanos</h4>
+              <span>12 imágenes</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Boda María & Juan</h4>
+              <span>48 imágenes</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Campaign SS25</h4>
+              <span>24 imágenes</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Productos estrella</h4>
+              <span>18 imágenes</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Arquitectura moderna</h4>
+              <span>30 imágenes</span>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop" alt="" />
+            <div class="portfolio-overlay">
+              <h4>Evento corporativo</h4>
+              <span>22 imágenes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOTÓGRAFOS ===== -->
+    <section class="page" id="page-fotografos">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Fotógrafos</span>
+          <h2>Directorio de fotógrafos</h2>
+          <p>Explora y gestiona los profesionales de la plataforma</p>
+        </div>
+        <div class="fotografos-toolbar">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar fotógrafo por nombre o especialidad..." />
+          </div>
+          <select class="fotografos-filter">
+            <option value="">Todos</option>
+            <option>Retratos</option>
+            <option>Eventos</option>
+            <option>Moda</option>
+            <option>Bodas</option>
+            <option>Producto</option>
+            <option>Arquitectura</option>
+          </select>
+          <select class="fotografos-filter">
+            <option value="">Ciudad</option>
+            <option>Medellín</option>
+            <option>Envigado</option>
+            <option>Sabaneta</option>
+            <option>Bello</option>
+          </select>
+        </div>
+        <div class="photographer-grid" id="fotografosGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== MÉTODO PAGO ===== -->
+    <section class="page" id="page-pago">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Pago</span>
+          <h2>Método de pago</h2>
+          <p>Administra tus tarjetas y métodos de pago</p>
+        </div>
+        <div class="pago-grid">
+          <div class="pago-card">
+            <div class="pago-card-header">
+              <i class="fas fa-credit-card"></i>
+              <span class="pago-badge">Principal</span>
+            </div>
+            <div class="pago-card-body">
+              <p class="pago-card-number">•••• •••• •••• 4532</p>
+              <div class="pago-card-footer">
+                <span>Visa</span>
+                <span>12/27</span>
+              </div>
+            </div>
+          </div>
+          <div class="pago-card">
+            <div class="pago-card-header">
+              <i class="fas fa-credit-card"></i>
+            </div>
+            <div class="pago-card-body">
+              <p class="pago-card-number">•••• •••• •••• 8910</p>
+              <div class="pago-card-footer">
+                <span>Mastercard</span>
+                <span>08/26</span>
+              </div>
+            </div>
+          </div>
+          <div class="pago-card add-card">
+            <i class="fas fa-plus"></i>
+            <p>Agregar nueva tarjeta</p>
+          </div>
+        </div>
+        <div class="pago-opciones">
+          <h3><i class="fas fa-history"></i> Historial de pagos</h3>
+          <div class="pago-historial">
+            <div class="pago-item"><span>Bodas · Carlos Pérez</span><span>$450.000</span><span class="status-badge completed">Pagado</span><span>12 Sep 2026</span></div>
+            <div class="pago-item"><span>Retratos · Ana Martínez</span><span>$180.000</span><span class="status-badge pending">Pendiente</span><span>28 Ago 2026</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEGURIDAD ===== -->
+    <section class="page" id="page-seguridad">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Seguridad</span>
+          <h2>Configuración de seguridad</h2>
+          <p>Protege tu cuenta y datos personales</p>
+        </div>
+        <div class="seguridad-grid">
+          <div class="glass-card seguridad-card">
+            <h3><i class="fas fa-lock"></i> Contraseña</h3>
+            <p>Cambia tu contraseña regularmente</p>
+            <form>
+              <input type="password" placeholder="Contraseña actual" />
+              <input type="password" placeholder="Nueva contraseña" />
+              <input type="password" placeholder="Confirmar contraseña" />
+              <button class="btn btn-primary"><i class="fas fa-save"></i> Actualizar</button>
+            </form>
+          </div>
+          <div class="glass-card seguridad-card">
+            <h3><i class="fas fa-shield-alt"></i> Verificación en dos pasos</h3>
+            <p>Añade una capa extra de seguridad</p>
+            <div class="toggle-row">
+              <span>Autenticación 2FA</span>
+              <label class="toggle"><input type="checkbox" /><span class="toggle-slider"></span></label>
+            </div>
+          </div>
+          <div class="glass-card seguridad-card">
+            <h3><i class="fas fa-history"></i> Sesiones activas</h3>
+            <p>2 sesiones activas actualmente</p>
+            <div class="session-item"><span>Windows · Chrome</span><span class="status-badge confirmed">Activa</span></div>
+            <div class="session-item"><span>Android · App</span><span class="status-badge confirmed">Activa</span></div>
+            <button class="btn btn-outline" style="margin-top:12px;"><i class="fas fa-sign-out-alt"></i> Cerrar todas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENTES ===== -->
+    <section class="page" id="page-clientes">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Clientes</span>
+          <h2>Mis clientes</h2>
+          <p>Gestiona tus relaciones con clientes</p>
+        </div>
+        <div class="clientes-toolbar">
+          <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar cliente..." />
+          </div>
+          <select class="clientes-filter">
+            <option value="">Todos</option>
+            <option>Recientes</option>
+            <option>Recurrentes</option>
+          </select>
+        </div>
+        <div class="clientes-list">
+          <div class="cliente-item">
+            <img src="https://i.pravatar.cc/48?img=1" alt="" />
+            <div class="cliente-info">
+              <strong>María Rodríguez</strong>
+              <span>3 sesiones · Última: 10 Jul 2026</span>
+            </div>
+            <span class="status-badge confirmed">Recurrente</span>
+          </div>
+          <div class="cliente-item">
+            <img src="https://i.pravatar.cc/48?img=2" alt="" />
+            <div class="cliente-info">
+              <strong>Pedro Gómez</strong>
+              <span>1 sesión · Última: 5 Jun 2026</span>
+            </div>
+            <span class="status-badge pending">Nuevo</span>
+          </div>
+          <div class="cliente-item">
+            <img src="https://i.pravatar.cc/48?img=3" alt="" />
+            <div class="cliente-info">
+              <strong>Laura García</strong>
+              <span>5 sesiones · Última: 20 Jun 2026</span>
+            </div>
+            <span class="status-badge confirmed">Recurrente</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ADMIN ===== -->
+    <section class="page" id="page-admin">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Admin</span>
+          <h2>Panel de administración</h2>
+          <p>Gestión global de la plataforma</p>
+        </div>
+        <div class="admin-stats">
+          <div class="stat-card"><i class="fas fa-users"></i><span class="stat-num">45</span><span>Usuarios</span></div>
+          <div class="stat-card"><i class="fas fa-camera"></i><span class="stat-num">18</span><span>Fotógrafos</span></div>
+          <div class="stat-card"><i class="fas fa-calendar-check"></i><span class="stat-num">67</span><span>Reservas</span></div>
+          <div class="stat-card"><i class="fas fa-dollar-sign"></i><span class="stat-num">12.4M</span><span>Facturado</span></div>
+        </div>
+        <div class="admin-grid">
+          <div class="glass-card">
+            <h3><i class="fas fa-user-check"></i> Usuarios recientes</h3>
+            <div class="admin-list">
+              <div class="admin-list-item"><span>Carlos Pérez</span><span class="status-badge confirmed">Cliente</span><span>Hoy</span></div>
+              <div class="admin-list-item"><span>Valentina Orozco</span><span class="status-badge confirmed">Fotógrafo</span><span>Ayer</span></div>
+              <div class="admin-list-item"><span>Andrés Castaño</span><span class="status-badge confirmed">Fotógrafo</span><span>Hace 2 días</span></div>
+            </div>
+          </div>
+          <div class="glass-card">
+            <h3><i class="fas fa-flag"></i> Reportes</h3>
+            <div class="admin-list">
+              <div class="admin-list-item"><span>Reporte de ingresos</span><i class="fas fa-download"></i></div>
+              <div class="admin-list-item"><span>Reporte de usuarios</span><i class="fas fa-download"></i></div>
+              <div class="admin-list-item"><span>Reporte de reservas</span><i class="fas fa-download"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOPORTE ===== -->
+    <section class="page" id="page-soporte">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Soporte</span>
+          <h2>Centro de soporte</h2>
+          <p>Ayuda y resolución de problemas</p>
+        </div>
+        <div class="soporte-grid">
+          <div class="glass-card soporte-card">
+            <i class="fas fa-question-circle"></i>
+            <h3>FAQ</h3>
+            <p>Preguntas frecuentes sobre la plataforma</p>
+            <button class="btn btn-outline">Ver más</button>
+          </div>
+          <div class="glass-card soporte-card">
+            <i class="fas fa-ticket-alt"></i>
+            <h3>Tickets</h3>
+            <p>Abre un ticket de soporte técnico</p>
+            <button class="btn btn-outline">Crear ticket</button>
+          </div>
+          <div class="glass-card soporte-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Contacto directo</h3>
+            <p>Llamada o videollamada con soporte</p>
+            <button class="btn btn-outline">Solicitar</button>
+          </div>
+          <div class="glass-card soporte-card">
+            <i class="fas fa-book"></i>
+            <h3>Guía de uso</h3>
+            <p>Documentación y tutoriales</p>
+            <button class="btn btn-outline">Leer guía</button>
+          </div>
+          <div class="glass-card soporte-card">
+            <i class="fas fa-bug"></i>
+            <h3>Reportar error</h3>
+            <p>Notifícanos sobre algún problema técnico</p>
+            <button class="btn btn-outline">Reportar</button>
+          </div>
+          <div class="glass-card soporte-card">
+            <i class="fas fa-comments"></i>
+            <h3>Feedback</h3>
+            <p>Comparte tu opinión para mejorar</p>
+            <button class="btn btn-outline">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAT ===== -->
+    <section class="page" id="page-chat">
+      <div class="container">
+        <div class="section-header">
+          <div class="hr-red"></div>
+          <span class="badge">Chat</span>
+          <h2>Mensajes</h2>
+          <p>Conversa con fotógrafos y clientes</p>
+        </div>
+        <div class="chat-layout">
+          <div class="chat-sidebar">
+            <div class="chat-search">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Buscar conversación..." />
+            </div>
+            <div class="chat-contacts">
+              <div class="chat-contact active">
+                <img src="https://i.pravatar.cc/40?img=11" alt="" />
+                <div class="chat-contact-info">
+                  <strong>Carlos Pérez</strong>
+                  <span>Gracias por la sesión, quedó...</span>
+                </div>
+                <span class="chat-unread">2</span>
+              </div>
+              <div class="chat-contact">
+                <img src="https://i.pravatar.cc/40?img=5" alt="" />
+                <div class="chat-contact-info">
+                  <strong>Ana Martínez</strong>
+                  <span>¿Tienes disponibilidad para...</span>
+                </div>
+              </div>
+              <div class="chat-contact">
+                <img src="https://i.pravatar.cc/40?img=9" alt="" />
+                <div class="chat-contact-info">
+                  <strong>Luis Gómez</strong>
+                  <span>Me gustaría reprogramar la...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat-main">
+            <div class="chat-header">
+              <strong>Carlos Pérez</strong>
+              <span>En línea</span>
+            </div>
+            <div class="chat-messages">
+              <div class="chat-msg received">
+                <p>Hola, quería agradecerte por la sesión de bodas.</p>
+                <span class="chat-time">10:30 AM</span>
+              </div>
+              <div class="chat-msg sent">
+                <p>¡Gracias a ti! Fue un placer trabajar con ustedes.</p>
+                <span class="chat-time">10:32 AM</span>
+              </div>
+              <div class="chat-msg received">
+                <p>Las fotos quedaron increíbles. ¿Cuándo estarán las ediciones finales?</p>
+                <span class="chat-time">10:33 AM</span>
+              </div>
+              <div class="chat-msg sent">
+                <p>Las estoy terminando, las tendrás listas en 3 días hábiles.</p>
+                <span class="chat-time">10:35 AM</span>
+              </div>
+            </div>
+            <div class="chat-input">
+              <input type="text" placeholder="Escribe un mensaje..." />
+              <button class="btn btn-primary"><i class="fas fa-paper-plane"></i></button>
+            </div>
           </div>
         </div>
       </div>

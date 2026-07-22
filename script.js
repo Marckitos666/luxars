@@ -378,4 +378,5 @@ window.addEventListener('scroll', () => {
 // ----- Init -----
 renderGrid('featuredGrid', photographers.slice(0, 3));
 renderGrid('catalogGrid', photographers);
+renderGrid('fotografosGrid', photographers);
 initBlobButtons();
