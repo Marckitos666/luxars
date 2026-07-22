@@ -395,6 +395,154 @@ function detectSQLInjection(str) {
   return sqlPatterns.test(str);
 }
 
+// ----- Custom DatePicker & TimePicker -----
+const DIAS_LABEL = ['Do','Lu','Ma','Mi','Ju','Vi','Sa'];
+const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+let pickerDate = new Date();
+let selectedDate = null;
+let selectedHour = null;
+let selectedMinute = null;
+
+function initCustomPickers() {
+  const trigger = document.getElementById('datepickerTrigger');
+  if (!trigger) return;
+
+  // --- DatePicker ---
+  renderDatePickerGrid();
+
+  document.getElementById('datepickerTrigger').addEventListener('click', function (e) {
+    e.stopPropagation();
+    const pop = document.getElementById('datepickerPopover');
+    const isOpen = pop.classList.contains('open');
+    closeAllPickers();
+    if (!isOpen) pop.classList.add('open');
+  });
+
+  document.querySelectorAll('.datepicker-nav-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const dir = parseInt(this.dataset.dir);
+      pickerDate = new Date(pickerDate.getFullYear(), pickerDate.getMonth() + dir, 1);
+      renderDatePickerGrid();
+    });
+  });
+
+  // --- TimePicker ---
+  renderTimePickerLists();
+
+  document.getElementById('timepickerTrigger').addEventListener('click', function (e) {
+    e.stopPropagation();
+    const pop = document.getElementById('timepickerPopover');
+    const isOpen = pop.classList.contains('open');
+    closeAllPickers();
+    if (!isOpen) pop.classList.add('open');
+  });
+
+  // Close on outside click
+  document.addEventListener('click', closeAllPickers);
+}
+
+function closeAllPickers() {
+  document.getElementById('datepickerPopover')?.classList.remove('open');
+  document.getElementById('timepickerPopover')?.classList.remove('open');
+}
+
+function renderDatePickerGrid() {
+  const year = pickerDate.getFullYear();
+  const month = pickerDate.getMonth();
+
+  document.getElementById('datepickerMonthYear').textContent = MESES[month] + ' ' + year;
+
+  const grid = document.getElementById('datepickerGrid');
+  grid.innerHTML = '';
+
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const daysPrevMonth = new Date(year, month, 0).getDate();
+
+  const cells = [];
+  for (let i = firstDay - 1; i >= 0; i--) cells.push({ day: daysPrevMonth - i, other: true, offset: -1 });
+  for (let d = 1; d <= daysInMonth; d++) cells.push({ day: d, other: false, offset: 0 });
+  let next = 1;
+  while (cells.length % 7 !== 0) cells.push({ day: next++, other: true, offset: 1 });
+
+  cells.forEach(cell => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'datepicker-day';
+    btn.textContent = cell.day;
+    if (cell.other) btn.classList.add('other-month');
+
+    const fecha = new Date(year, month + cell.offset, cell.day);
+    if (selectedDate && fecha.toDateString() === selectedDate.toDateString()) {
+      btn.classList.add('selected');
+    }
+    const today = new Date();
+    if (fecha.toDateString() === today.toDateString()) btn.classList.add('today');
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      selectedDate = fecha;
+      const dd = String(fecha.getDate()).padStart(2,'0');
+      const mm = String(fecha.getMonth()+1).padStart(2,'0');
+      const yyyy = fecha.getFullYear();
+      document.getElementById('bookDate').value = `${yyyy}-${mm}-${dd}`;
+      document.getElementById('datepickerText').textContent = `${dd}/${mm}/${yyyy}`;
+      document.getElementById('datepickerPopover').classList.remove('open');
+      renderDatePickerGrid();
+    });
+
+    grid.appendChild(btn);
+  });
+}
+
+function renderTimePickerLists() {
+  const hoursContainer = document.getElementById('timepickerHours');
+  const minsContainer = document.getElementById('timepickerMinutes');
+  if (!hoursContainer) return;
+
+  hoursContainer.innerHTML = '';
+  minsContainer.innerHTML = '';
+
+  for (let h = 6; h <= 22; h++) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = String(h).padStart(2,'0') + ':00';
+    if (selectedHour === h) btn.classList.add('selected');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      selectedHour = h;
+      updateTimeValue();
+      document.getElementById('timepickerHours').querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+    hoursContainer.appendChild(btn);
+  }
+
+  for (let m = 0; m < 60; m += 5) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = ':' + String(m).padStart(2,'0');
+    if (selectedMinute === m) btn.classList.add('selected');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      selectedMinute = m;
+      updateTimeValue();
+      document.getElementById('timepickerMinutes').querySelectorAll('button').forEach(b => b.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+    minsContainer.appendChild(btn);
+  }
+}
+
+function updateTimeValue() {
+  if (selectedHour === null || selectedMinute === null) return;
+  const timeStr = String(selectedHour).padStart(2,'0') + ':' + String(selectedMinute).padStart(2,'0');
+  document.getElementById('bookTime').value = timeStr;
+  document.getElementById('timepickerText').textContent = timeStr;
+  document.getElementById('timepickerPopover').classList.remove('open');
+}
+
 function initBookingSystem() {
   const container = document.getElementById('photographerSelector');
   if (!container) return;
@@ -911,4 +1059,5 @@ renderGrid('catalogGrid', photographers);
 renderGrid('fotografosGrid', photographers);
 initBlobButtons();
 initBookingSystem();
+initCustomPickers();
 initUploadSystem();
