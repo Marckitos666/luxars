@@ -398,8 +398,8 @@ navPanelClose.addEventListener('click', () => {
   navPanel.classList.remove('open');
 });
 
-document.getElementById('accessModalClose').addEventListener('click', closeAccessModal);
-document.getElementById('accessModal').addEventListener('click', function (e) {
+document.getElementById('accessModalClose')?.addEventListener('click', closeAccessModal);
+document.getElementById('accessModal')?.addEventListener('click', function (e) {
   if (e.target === this || e.target.classList.contains('access-modal-backdrop')) closeAccessModal();
 });
 

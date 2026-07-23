@@ -437,13 +437,13 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   border-left-color: var(--accent-red);
 }
 .nav-panel .nav-links .link.locked {
-  color: #555;
+  color: rgba(255, 255, 255, 0.35);
   cursor: not-allowed;
   border-left-color: transparent;
   opacity: 1;
 }
 .nav-panel .nav-links .link.locked:hover {
-  color: #555;
+  color: rgba(255, 255, 255, 0.35);
   background: none;
   border-left-color: transparent;
 }
@@ -453,7 +453,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   font-weight: 900;
   margin-left: auto;
   font-size: 0.65rem;
-  color: #555;
+  color: rgba(255, 255, 255, 0.35);
 }
 .nav-panel .nav-links .link--top,
 .nav-panel .nav-links .link--bottom,
