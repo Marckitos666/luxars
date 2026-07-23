@@ -167,7 +167,47 @@ const hamburger = document.getElementById('hamburger');
 const navPanel = document.getElementById('navPanel');
 const navPanelClose = document.getElementById('navPanelClose');
 
+const ACCESS_RULES = {
+  reservas: { auth: true, roles: null, msg: 'Debes iniciar sesión para acceder a Reservas.' },
+  portafolio: { auth: true, roles: ['photographer', 'admin'], msg: 'Solo fotógrafos pueden acceder a Portafolio. Inicia sesión como fotógrafo.' },
+  soporte: { auth: true, roles: null, msg: 'Debes iniciar sesión para acceder a Soporte.' },
+  chat: { auth: true, roles: null, msg: 'Debes iniciar sesión para acceder al Chat.' }
+};
+
+function hasAccess(page) {
+  const rule = ACCESS_RULES[page];
+  if (!rule) return true;
+  if (!rule.auth) return true;
+  if (!currentUser) return false;
+  if (rule.roles && !rule.roles.includes(currentUser.role)) return false;
+  return true;
+}
+
+function showToast(msg) {
+  let toast = document.getElementById('authToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'authToast';
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:9999;background:#1E1E1E;border:1px solid #FF0000;padding:14px 24px;display:flex;align-items:center;gap:12px;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;color:#fff;max-width:90vw;box-shadow:0 8px 32px rgba(0,0,0,0.5);opacity:0;transition:opacity 0.3s ease;pointer-events:none;';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = '';
+  const icon = document.createElement('i');
+  icon.className = 'fas fa-exclamation-triangle';
+  icon.style.color = '#FF0000';
+  toast.appendChild(icon);
+  toast.appendChild(document.createTextNode(' ' + msg));
+  toast.style.opacity = '1';
+  clearTimeout(toast._hide);
+  toast._hide = setTimeout(() => { toast.style.opacity = '0'; }, 5000);
+}
+
 function navigateTo(pageId) {
+  if (pageId !== 'auth' && !hasAccess(pageId)) {
+    const rule = ACCESS_RULES[pageId];
+    showToast(rule ? rule.msg : 'Acceso denegado.');
+    return;
+  }
   pages.forEach(p => p.classList.remove('active'));
   const target = document.getElementById(`page-${pageId}`);
   if (target) target.classList.add('active');
@@ -942,6 +982,17 @@ function updateNavbarUI() {
     if (panelLoginBtn) panelLoginBtn.style.display = 'flex';
     if (panelUser) panelUser.style.display = 'none';
   }
+
+  // Toggle lock state on restricted nav links
+  document.querySelectorAll('.nav-panel .nav-links .link').forEach(link => {
+    const page = link.dataset.page;
+    if (ACCESS_RULES[page]) {
+      const denied = !currentUser || (ACCESS_RULES[page].roles && !ACCESS_RULES[page].roles.includes(currentUser.role));
+      link.classList.toggle('locked', denied);
+    } else {
+      link.classList.remove('locked');
+    }
+  });
 }
 
 // ----- Upload System (Portafolio Module) -----

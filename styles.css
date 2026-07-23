@@ -436,6 +436,26 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   background: rgba(255, 0, 0, 0.05);
   border-left-color: var(--accent-red);
 }
+.nav-panel .nav-links .link.locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-left-color: transparent;
+}
+.nav-panel .nav-links .link.locked:hover {
+  opacity: 0.45;
+  color: var(--text-primary);
+  background: none;
+  border-left-color: transparent;
+}
+.nav-panel .nav-links .link.locked::after {
+  content: "\f023";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--accent-red);
+  opacity: 0.7;
+}
 .nav-panel .nav-links .link--top,
 .nav-panel .nav-links .link--bottom,
 .nav-panel .nav-links .link--top::after,
