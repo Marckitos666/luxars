@@ -661,9 +661,6 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 }
-.category-card:nth-child(5) {
-  grid-column: 2 / 4;
-}
 
 .category-card {
   position: relative;
