@@ -277,7 +277,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   right: 0;
   z-index: 1000;
   padding: 0;
-  transition: var(--transition);
+  transition: background 0.3s ease, border-color 0.3s ease;
   background: rgba(10, 10, 10, 0.6);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
@@ -285,12 +285,42 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   background: rgba(10, 10, 10, 0.9);
   border-bottom: 1px solid var(--accent-red);
 }
+.nav-container {
+  display: flex;
+  flex-direction: column;
+}
 .nav-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 14px 0;
+  gap: 12px;
 }
+.nav-row-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-row-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.logo i { color: var(--accent-red); }
+.logo span { color: var(--accent-red); }
+
+/* Nav search */
 .nav-search {
   padding: 0 0 14px;
 }
@@ -317,28 +347,15 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   padding: 7px 18px;
   font-size: 0.75rem;
 }
-.nav-container {
-  display: flex;
-  flex-direction: column;
-}
-.logo {
-  font-size: 1.3rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.logo i { color: var(--accent-red); }
-.logo span { color: var(--accent-red); }
 
-/* ----- Link Split Effect ----- */
+/* Nav links - desktop */
 .nav-links {
   display: flex;
   align-items: center;
   gap: 32px;
+  margin: 0;
 }
+.nav-links .btn-login { display: none; }
 .nav-links li {
   display: flex;
   align-items: center;
@@ -1472,9 +1489,10 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   .nav-links.open { right: 0; }
   .nav-links li { display: block; }
   .nav-links .link { font-size: 0.9rem; }
-  .btn-login { text-align: center; }
-  .user-badge, #loginBtn { margin-left: auto; }
+  .nav-links .btn-login { display: block; }
   .hamburger { display: flex; }
+  .btn-login { padding: 8px 10px !important; font-size: 0 !important; }
+  .btn-login i { font-size: 1rem; }
   .hero-text h1 { font-size: 2rem; }
   .hero-content { padding: 80px 0 40px; }
   .steps-grid { grid-template-columns: 1fr; }

@@ -34,54 +34,58 @@
   <nav class="navbar glass" id="navbar">
     <div class="container nav-container">
       <div class="nav-row">
-        <a href="#" class="logo" data-page="home">
-          <i class="fas fa-camera"></i> Lux<span>Ars</span>
-        </a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#" data-page="home" class="active link">
-            <span class="link--top">Inicio</span>
-            <span class="link--bottom">Inicio</span>
-          </a></li>
-          <li><a href="#" data-page="catalog" class="link">
-            <span class="link--top">Explorar</span>
-            <span class="link--bottom">Explorar</span>
-          </a></li>
-          <li><a href="#" data-page="reservas" class="link">
-            <span class="link--top">Reservas</span>
-            <span class="link--bottom">Reservas</span>
-          </a></li>
-          <li><a href="#" data-page="portafolio" class="link">
-            <span class="link--top">Portafolio</span>
-            <span class="link--bottom">Portafolio</span>
-          </a></li>
-          <li><a href="#" data-page="fotografos" class="link">
-            <span class="link--top">Fotógrafos</span>
-            <span class="link--bottom">Fotógrafos</span>
-          </a></li>
-          <li><a href="#" data-page="soporte" class="link">
-            <span class="link--top">Soporte</span>
-            <span class="link--bottom">Soporte</span>
-          </a></li>
-          <li><a href="#" data-page="chat" class="link">
-            <span class="link--top">Chat</span>
-            <span class="link--bottom">Chat</span>
-          </a></li>
-        </ul>
-        <div class="user-badge" id="userBadge" style="display:none;">
-          <button class="user-badge-btn" id="userBadgeBtn">
-            <img id="userAvatar" src="" alt="Avatar" />
-            <span id="userName"></span>
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="user-dropdown" id="userDropdown">
-            <a href="#" data-page="dashboard"><i class="fas fa-columns"></i> Dashboard</a>
-            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
-          </div>
+        <div class="nav-row-left">
+          <a href="#" class="logo" data-page="home">
+            <i class="fas fa-camera"></i> Lux<span>Ars</span>
+          </a>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#" data-page="home" class="active link">
+              <span class="link--top">Inicio</span>
+              <span class="link--bottom">Inicio</span>
+            </a></li>
+            <li><a href="#" data-page="catalog" class="link">
+              <span class="link--top">Explorar</span>
+              <span class="link--bottom">Explorar</span>
+            </a></li>
+            <li><a href="#" data-page="reservas" class="link">
+              <span class="link--top">Reservas</span>
+              <span class="link--bottom">Reservas</span>
+            </a></li>
+            <li><a href="#" data-page="portafolio" class="link">
+              <span class="link--top">Portafolio</span>
+              <span class="link--bottom">Portafolio</span>
+            </a></li>
+            <li><a href="#" data-page="fotografos" class="link">
+              <span class="link--top">Fotógrafos</span>
+              <span class="link--bottom">Fotógrafos</span>
+            </a></li>
+            <li><a href="#" data-page="soporte" class="link">
+              <span class="link--top">Soporte</span>
+              <span class="link--bottom">Soporte</span>
+            </a></li>
+            <li><a href="#" data-page="chat" class="link">
+              <span class="link--top">Chat</span>
+              <span class="link--bottom">Chat</span>
+            </a></li>
+          </ul>
         </div>
-        <a href="#" data-page="auth" class="btn btn-login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
-        <button class="hamburger" id="hamburger" aria-label="Menú">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav-row-right">
+          <div class="user-badge" id="userBadge" style="display:none;">
+            <button class="user-badge-btn" id="userBadgeBtn">
+              <img id="userAvatar" src="" alt="Avatar" />
+              <span id="userName"></span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="user-dropdown" id="userDropdown">
+              <a href="#" data-page="dashboard"><i class="fas fa-columns"></i> Dashboard</a>
+              <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
+            </div>
+          </div>
+          <a href="#" data-page="auth" class="btn btn-login" id="loginBtn"><i class="fas fa-sign-in-alt"></i> Ingresar</a>
+          <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
       <div class="nav-search">
         <div class="search-bar">
