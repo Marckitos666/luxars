@@ -1474,6 +1474,8 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   .user-badge, #loginBtn { margin-left: auto; }
   .hamburger { display: flex; }
   .hero-text h1 { font-size: 2rem; }
+  .hero-visual { display: none; }
+  .hero-content { padding: 80px 0 40px; }
   .steps-grid { grid-template-columns: 1fr; }
   .photographer-grid { grid-template-columns: 1fr; }
   .card:hover { transform: scale(1.03, 1.03); }
@@ -1497,6 +1499,10 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
 
 @media (max-width: 480px) {
   .hero-text h1 { font-size: 1.5rem; }
+  .hero-visual { display: none; }
+  .hero-text { backdrop-filter: none; padding: 24px; }
+  .hero-text p { font-size: 0.85rem; }
+  .hero-visual { display: none; }
   .section { padding: 40px 0; }
   .container { padding: 0 16px; }
   .step-card { padding: 24px; }
@@ -1510,6 +1516,140 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   .tag-wrapper:hover .tag-header h4:first-child { transform: translateY(-140px); }
   .tag-wrapper:hover .tag-header h4:last-child { transform: translateY(-140px); }
   .categories-grid { grid-template-columns: repeat(2, 110px); gap: 10px; }
+  .bg-orbs { display: none; }
+  .photographer-selector { grid-template-columns: repeat(2, 1fr); }
+  .payment-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .datepicker-popover { width: 280px; left: -40px; }
+  .timepicker-popover { width: 230px; }
+  .reservas-layout { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   TOUCH DEVICE OVERRIDES
+   ============================================================ */
+@media (hover: none) and (pointer: coarse) {
+  /* Background orbs — heavy on mobile GPU */
+  .bg-orbs { display: none; }
+  .hero-visual { display: none; }
+  .hero-text { backdrop-filter: none; }
+  .step-card .step-icon::before,
+  .step-card .step-icon::after { display: none; }
+
+  /* Nav link hover → active on tap */
+  .nav-links .link:active .link--top,
+  .nav-links .link.active .link--top {
+    transform: translateY(-0.3em) rotateZ(-2deg);
+    color: var(--accent-red);
+  }
+  .nav-links .link:active .link--bottom,
+  .nav-links .link.active .link--bottom {
+    color: rgba(255,0,0,0.6);
+  }
+  .nav-links .link:active .link--top::after,
+  .nav-links .link.active .link--top::after {
+    transform: rotateZ(-2.2deg) scaleX(100%);
+  }
+  .nav-links .link:active .link--bottom::after,
+  .nav-links .link.active .link--bottom::after {
+    transform: rotateZ(-2.1deg) scaleX(100%);
+  }
+
+  /* Card — show actions and hover state on tap */
+  .card:active,
+  .card.card-tapped {
+    transform: scale(1.02, 1.02);
+    border-color: var(--accent-red);
+  }
+  .card:active .card__img--hover,
+  .card.card-tapped .card__img--hover {
+    height: 100%;
+    opacity: 0.15;
+  }
+  .card:active .card__info,
+  .card.card-tapped .card__info {
+    background: rgba(20, 20, 20, 0.85);
+  }
+  .card:active .card__title,
+  .card.card-tapped .card__title {
+    color: var(--accent-red);
+  }
+  .card:active .card__actions,
+  .card.card-tapped .card__actions {
+    opacity: 1;
+    max-height: 60px;
+    margin-top: 12px;
+  }
+
+  /* Step card — lift on tap */
+  .step-card:active {
+    transform: translateY(-4px) scale(1.01);
+    border-color: var(--accent-red);
+  }
+  .step-card:active .step-bg-num {
+    color: rgba(255, 0, 0, 0.06);
+    transform: scale(1.08) translate(-3px, 3px);
+  }
+  .step-card:active .step-icon { transform: scale(1.06); }
+  .step-card:active .step-icon::before {
+    border-color: var(--accent-red);
+    transform: rotate(45deg);
+  }
+  .step-card:active .step-icon::after {
+    background: rgba(255, 0, 0, 0.08);
+    transform: rotate(-45deg);
+  }
+  .step-card:active .step-content h3 { color: var(--accent-red); }
+  .step-card:active .step-content p { color: var(--text-primary); }
+  .step-card:active .step-line { width: 60px; }
+
+  /* Tag wrapper — show overlay on tap */
+  .tag-wrapper:active {
+    border-color: var(--accent-red);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .tag-wrapper:active::before { background: rgba(0,0,0,0.15); }
+  .tag-wrapper:active .tag-image { transform: scale(1.15); }
+  .tag-wrapper:active .tag-image img { transform: scale(1.2); }
+  .tag-wrapper:active .tag-header h4:first-child { transform: translateY(-260px); }
+  .tag-wrapper:active .tag-header h4:last-child { transform: translateY(-260px); }
+
+  /* Blob buttons — simplify on touch */
+  .btn:hover .blob-btn__blob { transform: translateZ(0) scale(1.1); }
+  .btn:hover { transform: translateY(-1px); }
+
+  /* Reservation item tap */
+  .reservation-item:active {
+    border-color: var(--border-color);
+    border-left-color: var(--accent-red);
+  }
+
+  /* Photo option — use .selected instead of hover */
+  .photo-option:active {
+    border-color: var(--accent-red);
+    background: rgba(255,0,0,0.06);
+  }
+
+  /* Profile gallery */
+  .profile-gallery img:active { transform: scale(1.02); }
+
+  /* Footer links */
+  .footer-links a:active { color: var(--accent-red); }
+
+  /* Sidebar close */
+  .sidebar-close:active { border-color: var(--accent-red); color: var(--accent-red); }
+
+  /* Auth alt link */
+  .auth-alt a:active { text-decoration: underline; }
+
+  /* User badge */
+  .user-badge-btn:active { border-color: var(--accent-red); }
+  .user-dropdown a:active { background: rgba(255,0,0,0.06); color: var(--accent-red); }
+}
+
+/* Touch tap highlight reset for all touch devices */
+@media (hover: none) {
+  * { -webkit-tap-highlight-color: transparent; }
 }
 
 /* ============================================================

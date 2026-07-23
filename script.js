@@ -187,6 +187,9 @@ navLinks.forEach(link => {
       document.querySelector('.auth-tab[data-tab="login"]').click();
     }
     navigateTo(page);
+    // Close mobile menu
+    hamburger.classList.remove('active');
+    navList.classList.remove('open');
   });
 });
 
@@ -205,6 +208,18 @@ document.querySelectorAll('.tag-wrapper').forEach(wrapper => {
   });
 });
 
+// ----- Touch card toggle (show actions on tap) -----
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  document.addEventListener('click', function (e) {
+    const card = e.target.closest('.card');
+    if (!card || e.target.closest('.card__actions, a, button')) return;
+    document.querySelectorAll('.card.card-tapped').forEach(c => {
+      if (c !== card) c.classList.remove('card-tapped');
+    });
+    card.classList.toggle('card-tapped');
+  });
+}
+
 document.getElementById('quickSearchBtn').addEventListener('click', () => {
   const val = document.getElementById('quickSearch').value.trim();
   if (val) navigateTo('catalog');
@@ -220,6 +235,8 @@ function applyFilters() {
   filtered = filtered.filter(p => p.price <= maxPrice);
 
   renderGrid('catalogGrid', filtered);
+  // Close sidebar on mobile after filter
+  document.getElementById('sidebar').classList.remove('open');
 }
 
 document.getElementById('applyFilters').addEventListener('click', applyFilters);
@@ -1134,6 +1151,8 @@ document.getElementById('logoutBtn').addEventListener('click', function (e) {
   logoutSession();
   // Navigate to home
   document.querySelector('[data-page="home"]')?.click();
+  hamburger.classList.remove('active');
+  navList.classList.remove('open');
 });
 
 document.addEventListener('click', function () {
